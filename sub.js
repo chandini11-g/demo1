@@ -64,4 +64,4 @@ console.log(cal("/", 1, 2, 5));
 
 //switch
 
-function oper() {}
+
