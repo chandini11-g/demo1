@@ -1,15 +1,13 @@
 // coded by pavan
 function cal() {
-   var res = 0;
-   var resF = 1;
-   for (var i = 1; i < arguments.length; i++) {
-      if (arguments[0] === '+') res = res + arguments[i];
-      if (arguments[0] === '-') res = -res - arguments[i];
-      if (arguments[0] === '*') resF = resF * arguments[i];
+   var res = arguments[1];
+   for (var i = 1; i < arguments.length - 1; i++) {
+      if (arguments[0] === '+') res += arguments[i + 1];
+      if (arguments[0] === '-') res -= arguments[i + 1];
+      if (arguments[0] === '*') res *= arguments[i + 1];
+      if (arguments[0] === '/') res /= arguments[i + 1];
    }
-   if (arguments[0] === '/') resF = arguments[1] / arguments[2];
-   if (arguments[0] === '/' || arguments[0] === '*') return resF;
    return res;
 }
-console.log(cal('+', 9, 4));
+console.log(cal('/', 1, 2, 5));
 // first parameter should be an operator(+, -, *, /)
