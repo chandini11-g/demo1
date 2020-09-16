@@ -62,4 +62,4 @@ function cal() {
 console.log(cal("/", 1, 2, 5));
 // first parameter should be an operator(+, -, *, /)
 
-//switch
+
